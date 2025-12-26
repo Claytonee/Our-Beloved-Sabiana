@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="sw">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Merry Christmas & Happy New Year — Our Beloved Sabiana</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,355 +14,191 @@
       --bg-2:#111a2a;
       --bg-3:#1a2740;
       --gold:#d4af37;
-      --rose:#ff4b2b;
-      --rose-2:#ff6f61;
       --snow:#eef3ff;
-      --card:#0e1626cc;
-      --accent:#9cd8ff;
-      --success:#57ffa1;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
-      color:#fff;
-      background:
-        radial-gradient(1200px 600px at 80% -10%, #254e7a 0%, transparent 60%),
-        radial-gradient(900px 500px at 10% 10%, #18345a 0%, transparent 55%),
-        linear-gradient(160deg, var(--bg-1), var(--bg-2) 40%, var(--bg-3) 100%);
-      overflow-x:hidden;
+    
+    /* Inafanya body iwe kimo cha kioo cha simu tu na kuzuia kuscroll */
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; 
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      background: linear-gradient(160deg, var(--bg-1), var(--bg-2) 40%, var(--bg-3) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .sparkle, .snow {
       position: fixed; inset: 0; pointer-events: none; z-index: 1;
-      background-image:
-        radial-gradient(2px 2px at 10% 20%, #ffffffaa 40%, transparent 41%),
-        radial-gradient(2px 2px at 30% 70%, #ffffffaa 40%, transparent 41%),
-        radial-gradient(2px 2px at 80% 30%, #ffffffaa 40%, transparent 41%),
-        radial-gradient(1.5px 1.5px at 60% 10%, #ffffff88 40%, transparent 41%),
-        radial-gradient(1.5px 1.5px at 25% 85%, #ffffff88 40%, transparent 41%);
-      opacity:.25;
-    }
-    .snow {
-      background-image:
-        radial-gradient(2px 2px at 12% 10%, #ffffffcc 45%, transparent 46%),
-        radial-gradient(2px 2px at 45% 25%, #ffffffcc 45%, transparent 46%),
-        radial-gradient(2px 2px at 75% 35%, #ffffffcc 45%, transparent 46%),
-        radial-gradient(2px 2px at 20% 75%, #ffffffcc 45%, transparent 46%),
-        radial-gradient(2px 2px at 85% 80%, #ffffffcc 45%, transparent 46%);
-      animation: drift 14s linear infinite;
-      opacity:.18;
-    }
-    @keyframes drift {
-      0%{transform:translateY(-2vh)}
-      100%{transform:translateY(2vh)}
+      opacity: 0.2;
     }
 
     .wrap {
-      position:relative; z-index: 2;
-      max-width: 980px; margin: 0 auto; padding: 48px 24px 88px;
+      position: relative;
+      z-index: 2;
+      width: 92%;
+      max-width: 400px; /* Saizi ya kadi kwa simu */
     }
+
     .card {
-      background: linear-gradient(180deg, #0e1626f2, #0b1322f2);
+      background: rgba(14, 22, 38, 0.95);
       border: 1px solid #1f2a40;
       border-radius: 20px;
-      box-shadow:
-        0 60px 120px #0000008a,
-        inset 0 1px 0 #ffffff14,
-        inset 0 0 40px #274b7a12;
-      padding: 36px;
-      backdrop-filter: saturate(1.2) blur(12px);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
     }
 
-    .brand {
-      display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom: 8px;
-    }
+    .brand { display: flex; align-items: center; justify-content: center; gap: 8px; }
     .crest {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: conic-gradient(from 180deg, var(--gold), #f7e38a, var(--gold), #c99700, var(--gold));
-      box-shadow: 0 0 0 2px #c9970080, 0 10px 30px #c9970033;
-      position:relative;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: conic-gradient(var(--gold), #f7e38a, var(--gold));
+      position: relative;
     }
-    .crest::after{
-      content:"★"; position:absolute; inset:0; display:grid; place-items:center;
-      color:#2b2b2b; font-size:22px; font-weight:700;
-      text-shadow: 0 1px 0 #fff6, 0 3px 12px #0008;
-    }
+    .crest::after { content: "★"; position: absolute; inset: 0; display: grid; place-items: center; color: #1a1a1a; font-size: 14px; }
+
     h1 {
-      font-family:'Cinzel', serif;
-      font-size: clamp(28px, 4.2vw, 54px);
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
       margin: 0;
-      letter-spacing: .5px;
-      background: linear-gradient(90deg, #fff, #e8f2ff 20%, #c9e7ff, #ffffff);
-      -webkit-background-clip: text; background-clip:text; color: transparent;
-      text-shadow: 0 0 24px #eaf6ff14;
-    }
-    .sub {
-      font-size: clamp(14px, 1.6vw, 18px);
-      color:#cfe3ff; margin: 10px 0 24px;
+      background: linear-gradient(90deg, #fff, var(--gold));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
     }
 
-    .divider {
-      height: 1px; border: none;
-      background: linear-gradient(90deg, transparent, #ffffff26, #ffffff40, #ffffff26, transparent);
-      margin: 20px 0 26px;
-    }
+    .sub { font-size: 0.8rem; color: #cfe3ff; margin: 4px 0; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, #ffffff40, transparent); border: none; margin: 12px 0; }
 
     .msg {
-      font-size: clamp(15px, 1.7vw, 19px);
-      line-height: 1.7;
+      font-size: 0.9rem;
+      line-height: 1.5;
       color: #e9f2ff;
-      text-wrap: balance;
-    }
-    .highlight {
-      color: var(--gold);
-      font-weight: 600;
-      text-shadow: 0 0 16px #c9970022;
+      margin-bottom: 15px;
     }
 
-    /* Premium Image Button Style */
-    #action-area {
-      text-align: center;
-      margin-top: 30px;
-    }
+    .highlight { color: var(--gold); font-weight: 600; }
+    .underline { border-bottom: 1px solid var(--gold); }
+
+    /* Button ya Picha */
+    #action-area { margin-top: 10px; }
     .image-btn {
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      transition: transform 0.3s ease;
-      max-width: 250px; /* Unaweza kubadili ukubwa hapa */
-      width: 100%;
+      background: transparent; border: none; cursor: pointer; padding: 0; width: 180px; transition: 0.3s;
     }
-    .image-btn:hover {
-      transform: scale(1.1);
-    }
-    .image-btn img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    .image-btn img { width: 100%; height: auto; }
+    .image-btn:active { transform: scale(0.95); }
 
+    /* Sehemu ya Zawadi */
     .reward {
       display: none;
-      text-align:center; margin-top: 32px; padding: 26px;
-      border: 1px solid #2b4a76; border-radius: 16px;
-      background: linear-gradient(180deg, #0d1729, #0b1423);
-      box-shadow: inset 0 1px 0 #ffffff12;
-      animation: fadeIn .8s ease both;
+      margin-top: 15px;
+      padding: 15px;
+      border: 1px solid #2b4a76;
+      border-radius: 12px;
+      background: rgba(13, 23, 41, 0.9);
+      animation: fadeIn 0.5s ease;
     }
-    @keyframes fadeIn { from{opacity:0; transform: translateY(15px)} to{opacity:1; transform:none} }
+    
+    .reward h2 { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold); margin: 0 0 5px; }
+    .reward p { font-size: 0.85rem; margin: 0; line-height: 1.4; }
 
-    .reward h2 {
-      font-family:'Cinzel', serif;
-      font-size: clamp(24px, 3.6vw, 44px);
-      margin: 0 0 8px;
-      background: linear-gradient(90deg, #fff, #fff8e6 25%, var(--gold) 50%, #fff8e6 75%, #fff);
-      -webkit-background-clip:text; background-clip:text; color: transparent;
-    }
-    .reward p { color: #eaf2ff; font-size: clamp(15px, 1.8vw, 20px); margin: 6px 0 0; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .underline {
-      position:relative; display:inline-block;
-      background: linear-gradient(90deg, transparent 0%, transparent 10%, #9cd8ff 50%, transparent 90%, transparent);
-      -webkit-background-clip:text; background-clip:text;
-    }
-    .underline::after {
-      content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
-      background: linear-gradient(90deg, transparent, #9cd8ff, #57ffa1, #9cd8ff, transparent);
-      box-shadow: 0 0 20px #9cd8ff55;
-    }
-
-    canvas#fireworks { position: fixed; inset: 0; z-index: 3; pointer-events:none; }
-
-    .note {
-      margin-top: 30px; color:#bcd3f7; font-size: 13px; opacity:.8;
-    }
+    .note { margin-top: 15px; font-size: 0.7rem; color: #bcd3f7; opacity: 0.7; }
+    
+    canvas#fireworks { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
   </style>
 </head>
 <body>
   <div class="sparkle"></div>
-  <div class="snow"></div>
   <canvas id="fireworks"></canvas>
 
   <div class="wrap">
     <div class="card">
       <div class="brand">
-        <div class="crest" aria-hidden="true"></div>
+        <div class="crest"></div>
         <h1>Our Beloved Sabiana</h1>
       </div>
-      <p class="sub">Lecture — Probability & Statistics</p>
+      <p class="sub">Lecturer — Probability & Statistics</p>
       <hr class="divider" />
 
-<p class="msg" style="text-align: justify;">
-  Mhadhiri wetu mpendwa, <span class="highlight">Madam Sabiana</span>,  
-  tunakushukuru kwa juhudi zako na moyo wa kujitoa katika kutufundisha 
-  <span class="underline">Probability &amp; Statistics</span>.  
-  Umetuongoza kwa weledi na kutujengea msingi imara wa uelewa na nidhamu ya kitaaluma.
-  <br><br><p>
-  Tunakutakia <span class="highlight">Heri ya Krismasi</span> na  
-  <span class="highlight">Heri ya Mwaka Mpya</span> uliojaa baraka na mafanikio.
-  
-<p>
-</p>
+      <div id="main-content">
+        <p class="msg">
+          Mhadhiri mpendwa, <span class="highlight">Madam Sabiana</span>, tunakushukuru kwa juhudi zako kutufundisha 
+          <span class="underline">Probability & Statistics</span>. Umetujengea msingi imara wa kitaaluma.
+          <br><br>
+          Tunakutakia <span class="highlight">Heri ya Krismasi</span> na <span class="highlight">Mwaka Mpya</span> wenye baraka.
+        </p>
 
-
-
-      <div id="action-area">
-        <button class="image-btn" onclick="acceptGift()">
-          <img src="https://res.cloudinary.com/dwpfd5nak/image/upload/1_fungua_zawadi_msoozc.png" alt="Fungua Zawadi">
-        </button>
+        <div id="action-area">
+          <button class="image-btn" onclick="acceptGift()">
+            <img src="https://res.cloudinary.com/dwpfd5nak/image/upload/1_fungua_zawadi_msoozc.png" alt="Fungua Zawadi">
+          </button>
+        </div>
       </div>
 
       <div id="reward" class="reward">
         <h2>🎉 Our Beloved Sabiana 🎉</h2>
         <p>Merry Christmas & Happy New Year!</p>
-        <p style="margin-top:10px; color:#cfe3ff">
-            
-            Umeacha alama isiyofutika mioyoni mwa wanafunzi wako.
-Tunakupenda na tunakuthamini sana ❤️
-            
-            
+        <p style="margin-top:8px;">
+          Umeacha alama isiyofutika mioyoni mwetu. Tunakupenda na tunakuthamini sana ❤️
         </p>
       </div>
 
-      <p class="note">Imetengenezwa kwa mapenzi na heshima — kwa ajili ya Madam Sabiana.</p>
+      <p class="note">Imetengenezwa kwa mapenzi na heshima — kwa Madam Sabiana.</p>
     </div>
   </div>
 
   <script>
     function acceptGift() {
-      // Hide button area
       document.getElementById('action-area').style.display = 'none';
-      
-      // Show reward card
-      const reward = document.getElementById('reward');
-      reward.style.display = 'block';
-      
-      // Start fireworks and sparkles
+      // Hiari: Unaweza kuficha msg pia ili kupata nafasi zaidi
+      // document.querySelector('.msg').style.display = 'none'; 
+      document.getElementById('reward').style.display = 'block';
       launchFireworks();
-      burstSparkles();
     }
 
     function launchFireworks(){
       const canvas = document.getElementById('fireworks');
       const ctx = canvas.getContext('2d');
-      function resize(){
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resize(); window.addEventListener('resize', resize);
-
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       const particles = [];
-      const rockets = [];
-      const gravity = 0.06;
+      const gravity = 0.05;
 
-      function hue(){ return Math.floor(Math.random()*360); }
-
-      function spawnRocket(){
-        const x = Math.random() * canvas.width * 0.8 + canvas.width*0.1;
-        rockets.push({
-          x, y: canvas.height + 10,
-          vx: (Math.random()-0.5)*1.2,
-          vy: -(Math.random()*3.5 + 5.5),
-          peak: Math.random()*canvas.height*0.5 + canvas.height*0.2,
-          color: `hsl(${hue()}, 100%, 65%)`
-        });
-      }
-
-      function explode(x,y,color){
-        const count = 80 + Math.floor(Math.random()*40);
-        for(let i=0;i<count;i++){
-          const angle = Math.random()*Math.PI*2;
-          const speed = Math.random()*5 + 2.5;
+      function explode(x, y) {
+        for(let i=0; i<50; i++) {
           particles.push({
             x, y,
-            vx: Math.cos(angle)*speed,
-            vy: Math.sin(angle)*speed,
-            life: 70 + Math.random()*30,
-            decay: 0.98 - Math.random()*0.02,
-            radius: Math.random()*2.6 + 1,
-            color
-          });
-        }
-        for(let i=0;i<36;i++){
-          const a = (i/36)*Math.PI*2;
-          particles.push({
-            x: x + Math.cos(a)*10, y: y + Math.sin(a)*10,
-            vx: Math.cos(a)*1.2, vy: Math.sin(a)*1.2,
-            life: 45, decay: 0.985,
-            radius: 1.2, color: '#fff'
+            vx: (Math.random()-0.5)*6,
+            vy: (Math.random()-0.5)*6,
+            life: 100,
+            color: `hsl(${Math.random()*360}, 100%, 50%)`
           });
         }
       }
 
-      let last = 0;
-      function frame(ts){
-        if(!last) last = ts;
-        const dt = (ts - last)/16.67; last = ts;
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-
-        if(Math.random() < 0.06) spawnRocket();
-        for(let i=rockets.length-1;i>=0;i--){
-          const r = rockets[i];
-          r.x += r.vx*dt; r.y += r.vy*dt; r.vy += gravity*dt;
-          ctx.beginPath();
-          ctx.arc(r.x, r.y, 2.2, 0, Math.PI*2);
-          ctx.fillStyle = '#fff';
-          ctx.fill();
-
-          if(r.y <= r.peak){
-            explode(r.x, r.y, r.color);
-            rockets.splice(i,1);
-          }
-        }
-
-        for(let i=particles.length-1;i>=0;i--){
-          const p = particles[i];
-          p.x += p.vx*dt; p.y += p.vy*dt; p.vy += gravity*0.15*dt;
-          p.life -= dt; p.vx *= p.decay; p.vy *= p.decay;
-          if(p.life <= 0){ particles.splice(i,1); continue; }
-          ctx.globalCompositeOperation = 'lighter';
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, Math.PI*2);
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if(Math.random() < 0.05) explode(Math.random()*canvas.width, Math.random()*canvas.height*0.5);
+        
+        for(let i=particles.length-1; i>=0; i--) {
+          let p = particles[i];
+          p.x += p.vx; p.y += p.vy; p.vy += gravity; p.life--;
+          if(p.life <= 0) particles.splice(i,1);
           ctx.fillStyle = p.color;
-          ctx.fill();
-          ctx.globalCompositeOperation = 'source-over';
+          ctx.fillRect(p.x, p.y, 2, 2);
         }
-        requestAnimationFrame(frame);
+        requestAnimationFrame(animate);
       }
-      requestAnimationFrame(frame);
-    }
-
-    function burstSparkles(){
-      const burst = document.createElement('div');
-      burst.style.position = 'fixed';
-      burst.style.inset = '0';
-      burst.style.pointerEvents = 'none';
-      burst.style.zIndex = '4';
-      document.body.appendChild(burst);
-      const n = 80;
-      for(let i=0;i<n;i++){
-        const s = document.createElement('span');
-        const x = Math.random()*100;
-        const y = Math.random()*60 + 10;
-        const size = Math.random()*6 + 3;
-        s.style.position='absolute';
-        s.style.left = x+'vw'; s.style.top = y+'vh';
-        s.style.width = size+'px'; s.style.height = size+'px';
-        s.style.background = `radial-gradient(circle, #fff, #fff0)`;
-        s.style.filter = 'drop-shadow(0 0 6px #fff)';
-        s.style.borderRadius='50%';
-        const dx = (Math.random()-0.5)*2.6;
-        const dy = (Math.random()-0.5)*2.0;
-        s.animate([
-          { transform:`translate(0,0) scale(1)`, opacity: 1 },
-          { transform:`translate(${dx}rem, ${dy}rem) scale(0)`, opacity: 0 }
-        ], { duration: 1600 + Math.random()*800, easing: 'ease-out', fill:'forwards' });
-        burst.appendChild(s);
-      }
-      setTimeout(()=> burst.remove(), 2400);
+      animate();
     }
   </script>
 </body>
