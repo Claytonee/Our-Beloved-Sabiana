@@ -1,404 +1,368 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Happy Birthday Jenipher 🎉</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  /* ====== MABORESHO YA CSS ====== */
-  :root{
-    --pink:#fcd4e0;
-    --lav:#e0d4fc;
-    --ink:#333;
-    --rose:#c54b8c;
-    --night-bg-dark:#04060f;
-    --night-bg-light:#0b1022;
-    --night-text:#eaeaf6;
-    --night-rose:#ffd1f0;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color:var(--ink);
-    background: linear-gradient(135deg, var(--pink), var(--lav));
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    transition: background 1.2s ease, color .6s ease;
-    overflow:hidden;
-  }
-  body.night{
-    background: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
-                linear-gradient(180deg, var(--night-bg-light), var(--night-bg-dark) 70%);
-    color:var(--night-text);
-  }
-  .container{
-    background:#fff;
-    color:#333;
-    padding:22px;
-    border-radius:22px;
-    box-shadow: 0 14px 40px rgba(0,0,0,.12);
-    text-align:center;
-    max-width:560px;
-    width:min(92vw, 560px);
-    transition: transform .4s ease, background .4s ease, color .4s ease, opacity .6s ease;
-    z-index:20;
-    position:relative;
-  }
-  .fade-out{
-    opacity:0 !important;
-    transform: translateY(10px) scale(.995);
-    pointer-events:none;
-  }
-  body.night .container{
-    background: rgba(255,255,255,.08);
-    color:var(--night-text);
-    backdrop-filter: blur(6px);
-    border:1px solid rgba(255,255,255,.12);
-  }
-  h1{ color:var(--rose); margin-top:0 }
-  body.night h1{ color:var(--night-rose) }
-  button{
-    background: linear-gradient(135deg, #fba0c6, #d8b4fe);
-    border:none;
-    color:#fff;
-    padding:12px 20px;
-    border-radius:999px;
-    font-size:1rem;
-    cursor:pointer;
-    transition: transform .15s ease, box-shadow .15s ease;
-    margin-top:14px;
-    box-shadow: 0 10px 20px rgba(207, 138, 216, .35);
-  }
-  button:hover{ transform: translateY(-1px) }
-  button:active{ transform: scale(.98) }
-  
-  .hidden{ display:none !important; }
-  .stack{ display:grid; gap:14px; }
-  .opt-row button{ margin: 6px }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Merry Christmas & Happy New Year — Our Beloved Sabiana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#0b0f1a;
+      --bg-2:#111a2a;
+      --bg-3:#1a2740;
+      --gold:#d4af37;
+      --rose:#ff4b2b;
+      --rose-2:#ff6f61;
+      --snow:#eef3ff;
+      --card:#0e1626cc;
+      --accent:#9cd8ff;
+      --success:#57ffa1;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      color:#fff;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, #254e7a 0%, transparent 60%),
+        radial-gradient(900px 500px at 10% 10%, #18345a 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2) 40%, var(--bg-3) 100%);
+      overflow-x:hidden;
+    }
 
-  /* Canvas (fireworks only) */
-  #sky{
-    position:fixed;
-    inset:0;
-    width:100vw;
-    height:100vh;
-    pointer-events:none;
-    z-index:5;
-  }
+    .sparkle, .snow {
+      position: fixed; inset: 0; pointer-events: none; z-index: 1;
+      background-image:
+        radial-gradient(2px 2px at 10% 20%, #ffffffaa 40%, transparent 41%),
+        radial-gradient(2px 2px at 30% 70%, #ffffffaa 40%, transparent 41%),
+        radial-gradient(2px 2px at 80% 30%, #ffffffaa 40%, transparent 41%),
+        radial-gradient(1.5px 1.5px at 60% 10%, #ffffff88 40%, transparent 41%),
+        radial-gradient(1.5px 1.5px at 25% 85%, #ffffff88 40%, transparent 41%);
+      opacity:.25;
+    }
+    .snow {
+      background-image:
+        radial-gradient(2px 2px at 12% 10%, #ffffffcc 45%, transparent 46%),
+        radial-gradient(2px 2px at 45% 25%, #ffffffcc 45%, transparent 46%),
+        radial-gradient(2px 2px at 75% 35%, #ffffffcc 45%, transparent 46%),
+        radial-gradient(2px 2px at 20% 75%, #ffffffcc 45%, transparent 46%),
+        radial-gradient(2px 2px at 85% 80%, #ffffffcc 45%, transparent 46%);
+      animation: drift 14s linear infinite;
+      opacity:.18;
+    }
+    @keyframes drift {
+      0%{transform:translateY(-2vh)}
+      100%{transform:translateY(2vh)}
+    }
 
-  /* Tiny progress dots (hatua) */
-  .steps{ display:flex; justify-content:center; gap:8px; margin-top:8px }
-  .dot{ width:8px; height:8px; border-radius:50%; background:#e5e7eb; }
-  .dot.active{ background:#c54b8c }
-  body.night .dot{ background:#223 }
-  body.night .dot.active{ background:#ffd1f0 }
+    .wrap {
+      position:relative; z-index: 2;
+      max-width: 980px; margin: 0 auto; padding: 48px 24px 88px;
+    }
+    .card {
+      background: linear-gradient(180deg, #0e1626f2, #0b1322f2);
+      border: 1px solid #1f2a40;
+      border-radius: 20px;
+      box-shadow:
+        0 60px 120px #0000008a,
+        inset 0 1px 0 #ffffff14,
+        inset 0 0 40px #274b7a12;
+      padding: 36px;
+      backdrop-filter: saturate(1.2) blur(12px);
+    }
 
-  /* New: Styled Text */
-  .final-text{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: 10;
-    text-align: center;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  .final-text h2{
-    font-size: clamp(3rem, 10vw, 5rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-    color: var(--night-rose);
-    text-shadow: 0 0 10px rgba(255,209,240,.6);
-  }
-  .final-text.visible{
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  .final-text.hidden-text{
-    display: none;
-  }
+    .brand {
+      display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom: 8px;
+    }
+    .crest {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--gold), #f7e38a, var(--gold), #c99700, var(--gold));
+      box-shadow: 0 0 0 2px #c9970080, 0 10px 30px #c9970033;
+      position:relative;
+    }
+    .crest::after{
+      content:"★"; position:absolute; inset:0; display:grid; place-items:center;
+      color:#2b2b2b; font-size:22px; font-weight:700;
+      text-shadow: 0 1px 0 #fff6, 0 3px 12px #0008;
+    }
+    h1 {
+      font-family:'Cinzel', serif;
+      font-size: clamp(28px, 4.2vw, 54px);
+      margin: 0;
+      letter-spacing: .5px;
+      background: linear-gradient(90deg, #fff, #e8f2ff 20%, #c9e7ff, #ffffff);
+      -webkit-background-clip: text; background-clip:text; color: transparent;
+      text-shadow: 0 0 24px #eaf6ff14;
+    }
+    .sub {
+      font-size: clamp(14px, 1.6vw, 18px);
+      color:#cfe3ff; margin: 10px 0 24px;
+    }
 
-</style>
+    .divider {
+      height: 1px; border: none;
+      background: linear-gradient(90deg, transparent, #ffffff26, #ffffff40, #ffffff26, transparent);
+      margin: 20px 0 26px;
+    }
+
+    .msg {
+      font-size: clamp(15px, 1.7vw, 19px);
+      line-height: 1.7;
+      color: #e9f2ff;
+      text-wrap: balance;
+    }
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+      text-shadow: 0 0 16px #c9970022;
+    }
+
+    /* Premium Image Button Style */
+    #action-area {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .image-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.3s ease;
+      max-width: 250px; /* Unaweza kubadili ukubwa hapa */
+      width: 100%;
+    }
+    .image-btn:hover {
+      transform: scale(1.1);
+    }
+    .image-btn img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .reward {
+      display: none;
+      text-align:center; margin-top: 32px; padding: 26px;
+      border: 1px solid #2b4a76; border-radius: 16px;
+      background: linear-gradient(180deg, #0d1729, #0b1423);
+      box-shadow: inset 0 1px 0 #ffffff12;
+      animation: fadeIn .8s ease both;
+    }
+    @keyframes fadeIn { from{opacity:0; transform: translateY(15px)} to{opacity:1; transform:none} }
+
+    .reward h2 {
+      font-family:'Cinzel', serif;
+      font-size: clamp(24px, 3.6vw, 44px);
+      margin: 0 0 8px;
+      background: linear-gradient(90deg, #fff, #fff8e6 25%, var(--gold) 50%, #fff8e6 75%, #fff);
+      -webkit-background-clip:text; background-clip:text; color: transparent;
+    }
+    .reward p { color: #eaf2ff; font-size: clamp(15px, 1.8vw, 20px); margin: 6px 0 0; }
+
+    .underline {
+      position:relative; display:inline-block;
+      background: linear-gradient(90deg, transparent 0%, transparent 10%, #9cd8ff 50%, transparent 90%, transparent);
+      -webkit-background-clip:text; background-clip:text;
+    }
+    .underline::after {
+      content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
+      background: linear-gradient(90deg, transparent, #9cd8ff, #57ffa1, #9cd8ff, transparent);
+      box-shadow: 0 0 20px #9cd8ff55;
+    }
+
+    canvas#fireworks { position: fixed; inset: 0; z-index: 3; pointer-events:none; }
+
+    .note {
+      margin-top: 30px; color:#bcd3f7; font-size: 13px; opacity:.8;
+    }
+  </style>
 </head>
 <body>
+  <div class="sparkle"></div>
+  <div class="snow"></div>
+  <canvas id="fireworks"></canvas>
 
-<canvas id="sky"></canvas>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">
+        <div class="crest" aria-hidden="true"></div>
+        <h1>Our Beloved Sabiana</h1>
+      </div>
+      <p class="sub">Lecture — Probability & Statistics</p>
+      <hr class="divider" />
 
-<div class="container" id="step1">
-  <h1>🎂 Happy Birthday Jenipher 🎂</h1>
-  <p>Leo ni siku yako maalum, Boss wetu mpendwa!
-  Karibu kwenye safari ya hatua 4 za sherehe 🎉</p>
-  <button onclick="nextStep(2)">Anza Sherehe ➜</button>
-  <div class="steps"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-</div>
+<p class="msg" style="text-align: justify;">
+  Mhadhiri wetu mpendwa, <span class="highlight">Madam Sabiana</span>,  
+  tunakushukuru kwa juhudi zako na moyo wa kujitoa katika kutufundisha 
+  <span class="underline">Probability &amp; Statistics</span>.  
+  Umetuongoza kwa weledi na kutujengea msingi imara wa uelewa na nidhamu ya kitaaluma.
+  <br><br><p>
+  Tunakutakia <span class="highlight">Heri ya Krismasi</span> na  
+  <span class="highlight">Heri ya Mwaka Mpya</span> uliojaa baraka na mafanikio.
+  
+<p>
+</p>
 
-<div class="container hidden" id="step2">
-  <h1>🌸 Hatua ya 2 🌸</h1>
-  <p>Chagua emoji inayokuonyesha furaha yako leo:</p>
-  <div class="opt-row">
-    <button onclick="selectEmoji('💖')">💖</button>
-    <button onclick="selectEmoji('🎉')">🎉</button>
-    <button onclick="selectEmoji('🌹')">🌹</button>
-    <button onclick="selectEmoji('✨')">✨</button>
+
+
+      <div id="action-area">
+        <button class="image-btn" onclick="acceptGift()">
+          <img src="https://res.cloudinary.com/dwpfd5nak/image/upload/1_fungua_zawadi_msoozc.png" alt="Fungua Zawadi">
+        </button>
+      </div>
+
+      <div id="reward" class="reward">
+        <h2>🎉 Our Beloved Sabiana 🎉</h2>
+        <p>Merry Christmas & Happy New Year!</p>
+        <p style="margin-top:10px; color:#cfe3ff">
+            
+            Umeacha alama isiyofutika mioyoni mwa wanafunzi wako.
+Tunakupenda na tunakuthamini sana ❤️
+            
+            
+        </p>
+      </div>
+
+      <p class="note">Imetengenezwa kwa mapenzi na heshima — kwa ajili ya Madam Sabiana.</p>
+    </div>
   </div>
-  <button onclick="nextStep(1)" style="background:#e5e7eb;color:#333">⟵ Rudi</button>
-  <div class="steps"><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-</div>
 
-<div class="container hidden" id="step3">
-  <h1>💌 Hatua ya 3 💌</h1>
-  <p>Chagua neno linalokuelezea:</p>
-  <div class="stack">
-    <button onclick="selectWord('Mwenye moyo wa upendo')">Mwenye moyo wa upendo</button>
-    <button onclick="selectWord('Kiongozi mwenye maono')">Kiongozi mwenye maono</button>
-    <button onclick="selectWord('Mwenye faraja')">Mwenye faraja</button>
-    <button onclick="selectWord('Msikivu na mwenye hekima')">Msikivu na mwenye hekima</button>
-  </div>
-  <button onclick="nextStep(2)" style="background:#e5e7eb;color:#333">⟵ Rudi</button>
-  <div class="steps"><span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span></div>
-</div>
-
-<div class="container hidden" id="step4">
-  <h1>🎊 Hatua ya Mwisho 🎊</h1>
-  <p id="finalMessage">💖 Jenipher mpendwa, wewe ni Mwenye moyo wa upendo.<br>
-  Umenisaidia sana tangu nianze EnterSoft Systems Ltd—uliniinua wakati wa magumu na kunijali kwa dhati.<br>
-  Nakutakia maisha marefu, furaha tele na baraka zisizo na kipimo.<br>
-  Happy Birthday! 💖</p>
-  <button id="finaleBtn" onclick="startFinale()">Piga Sherehe 🎆</button>
-  <div class="steps"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot active"></span></div>
-</div>
-
-<div id="finalText" class="final-text hidden-text">
-  <h2>Happy Birthday Jenipher</h2>
-</div>
-
-<script>
-  /* ======= MABORESHO YA JAVASCRIPT: LOGIC YA FLOW ======= */
-  let chosenEmoji = '';
-  let chosenWord = '';
-  const stepEls = [1,2,3,4].map(n=>document.getElementById('step'+n));
-  function setDots(step){
-    document.querySelectorAll('.steps').forEach(group=>{
-      const dots = [...group.querySelectorAll('.dot')];
-      dots.forEach(d=>d.classList.remove('active'));
-      if(dots[step-1]) dots[step-1].classList.add('active');
-    });
-  }
-  function nextStep(step){
-    stepEls.forEach(el=>el.classList.add('hidden'));
-    document.getElementById('step'+step).classList.remove('hidden');
-    setDots(step);
-    window.scrollTo({top:0, behavior:'smooth'});
-  }
-  function selectEmoji(e){ chosenEmoji = e; nextStep(3); }
-  function selectWord(w){
-    chosenWord = w;
-    const msg = `${chosenEmoji} Jenipher mpendwa, wewe ni ${chosenWord}.<br>
-      Umenisaidia sana tangu nianze EnterSoft Systems Ltd—uliniinua wakati wa magumu na kunijali kwa dhati.<br>
-      Nakutakia maisha marefu, furaha tele na baraka zisizo na kipimo.<br>
-      Happy Birthday! ${chosenEmoji}`;
-    document.getElementById('finalMessage').innerHTML = msg;
-    nextStep(4);
-  }
-
-  /* ======= MABORESHO YA JAVASCRIPT: CANVAS (Sasa ni za Fireworks tu) ======= */
-  const sky = document.getElementById('sky');
-  const c = sky.getContext('2d');
-  let W = sky.width = window.innerWidth;
-  let H = sky.height = window.innerHeight;
-  window.addEventListener('resize', ()=>{
-    W = sky.width = window.innerWidth;
-    H = sky.height = window.innerHeight;
-  });
-
-  /* ======= STARFIELD (night mood) ======= */
-  let stars = [];
-  function makeStars(n=180){
-    stars = [];
-    for(let i=0;i<n;i++){
-      stars.push({
-        x: Math.random()*W, y: Math.random()*H,
-        r: Math.random()*1.2 + .2,
-        tw: Math.random()*100 + 40
-      });
+  <script>
+    function acceptGift() {
+      // Hide button area
+      document.getElementById('action-area').style.display = 'none';
+      
+      // Show reward card
+      const reward = document.getElementById('reward');
+      reward.style.display = 'block';
+      
+      // Start fireworks and sparkles
+      launchFireworks();
+      burstSparkles();
     }
-  }
-  function drawStars(t){
-    c.save();
-    for(const s of stars){
-      const a = .4 + Math.sin((t/s.tw))*0.4;
-      c.globalAlpha = a;
-      c.fillStyle = '#fff';
-      c.beginPath(); c.arc(s.x, s.y, s.r, 0, Math.PI*2); c.fill();
-    }
-    c.restore(); c.globalAlpha = 1;
-  }
 
-  /* ======= FIREWORKS ======= */
-  const GRAVITY = 0.06;
-  let rockets = [];
-  let sparks = [];
-
-  function spawnRocket(x, targetY){
-    rockets.push({
-      x, y: H+10,
-      vx: (Math.random()*2 - 1)*0.6,
-      vy: -(6 + Math.random()*2.5),
-      color: `hsl(${Math.random()*360},100%,60%)`,
-      explodeY: targetY || (H*0.25 + Math.random()*H*0.35)
-    });
-  }
-  function updateRockets(){
-    const next=[];
-    for(const r of rockets){
-      r.x += r.vx; r.y += r.vy; r.vy += GRAVITY*0.25;
-      sparks.push({x:r.x, y:r.y, vx:(Math.random()-.5)*.6, vy:(Math.random()-.5)*.6, life:20+Math.random()*10, color:r.color, size:1.2});
-      if(r.y <= r.explodeY){
-        explode(r.x, r.y, r.color);
-      } else next.push(r);
-    }
-    rockets = next;
-  }
-  function explode(x, y, baseColor){
-    const N = 60 + Math.floor(Math.random()*50);
-    for(let i=0;i<N;i++){
-      const angle = (Math.PI*2)*i/N;
-      const speed = 1.8 + Math.random()*3.2;
-      sparks.push({
-        x, y,
-        vx: Math.cos(angle)*speed + (Math.random()-.5)*.6,
-        vy: Math.sin(angle)*speed + (Math.random()-.5)*.6,
-        life: 50 + Math.random()*40,
-        color: Math.random()<.4 ? baseColor : `hsl(${Math.random()*360},100%,60%)`,
-        size: 1.6 + Math.random()*1.6,
-        glow: true
-      });
-    }
-  }
-  function updateSparks(){
-    const next=[];
-    for(const s of sparks){
-      s.life -= 1;
-      s.x += s.vx; s.y += s.vy;
-      s.vy += GRAVITY;
-      s.vx *= 0.995; s.vy *= 0.995;
-      if(s.life>0 && s.y<H+20) next.push(s);
-    }
-    sparks = next;
-  }
-  function drawSparks(){
-    c.save();
-    for(const s of sparks){
-      const a = Math.max(0, Math.min(1, s.life/60));
-      c.globalAlpha = a;
-      if(s.glow){
-        c.shadowBlur = 12; c.shadowColor = s.color;
-      } else {
-        c.shadowBlur = 0;
+    function launchFireworks(){
+      const canvas = document.getElementById('fireworks');
+      const ctx = canvas.getContext('2d');
+      function resize(){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
       }
-      c.fillStyle = s.color;
-      c.beginPath(); c.arc(s.x, s.y, s.size, 0, Math.PI*2); c.fill();
-    }
-    c.restore(); c.globalAlpha = 1;
-  }
+      resize(); window.addEventListener('resize', resize);
 
-  /* ======= FINALE CONTROLLER ======= */
-  let running=false, t0=0, finaleStage='idle', finaleTimer=0;
-  const finalTextEl = document.getElementById('finalText');
+      const particles = [];
+      const rockets = [];
+      const gravity = 0.06;
 
-  function hideAllUIThen(fn){
-    const all = document.querySelectorAll('.container');
-    all.forEach(el=>{
-      el.classList.add('fade-out');
-    });
-    setTimeout(()=>{
-      all.forEach(el=>el.classList.add('hidden'));
-      if(typeof fn === 'function') fn();
-    }, 650);
-  }
+      function hue(){ return Math.floor(Math.random()*360); }
 
-  function startFinale(){
-    hideAllUIThen(()=>{
-      document.body.classList.add('night');
-      makeStars();
-      finalTextEl.classList.remove('hidden-text');
-      // Subiri kidogo kisha anza sherehe
-      setTimeout(()=>{
-        finalTextEl.classList.add('visible');
-        finaleStage = 'barrage'; // ANZA STAGE YA FIREWORKS HAPA!
-        running = true;
-        finaleTimer = 0;
-        t0 = performance.now();
-      }, 1500); // 1.5 sekunde kabla fireworks kuanza
-    });
-  }
+      function spawnRocket(){
+        const x = Math.random() * canvas.width * 0.8 + canvas.width*0.1;
+        rockets.push({
+          x, y: canvas.height + 10,
+          vx: (Math.random()-0.5)*1.2,
+          vy: -(Math.random()*3.5 + 5.5),
+          peak: Math.random()*canvas.height*0.5 + canvas.height*0.2,
+          color: `hsl(${hue()}, 100%, 65%)`
+        });
+      }
 
-  function loop(now){
-    const elapsed = now - (t0 || now);
-    if(!running){
-      requestAnimationFrame(loop);
-      return;
-    }
-    t0 = now;
-    c.clearRect(0,0,W,H);
-    drawStars(now/16);
-
-    if(finaleStage==='barrage'){
-      if(Math.random()<0.16) spawnRocket(Math.random()*W);
-      updateRockets(); drawSparks(); updateSparks();
-      finaleTimer += elapsed;
-      if(finaleTimer>6000){
-        finaleStage='grand'; finaleTimer=0;
-        for(let i=0;i<6;i++){
-          const x = (i+1)*(W/7);
-          spawnRocket(x, H*0.3 + Math.random()*H*0.15);
+      function explode(x,y,color){
+        const count = 80 + Math.floor(Math.random()*40);
+        for(let i=0;i<count;i++){
+          const angle = Math.random()*Math.PI*2;
+          const speed = Math.random()*5 + 2.5;
+          particles.push({
+            x, y,
+            vx: Math.cos(angle)*speed,
+            vy: Math.sin(angle)*speed,
+            life: 70 + Math.random()*30,
+            decay: 0.98 - Math.random()*0.02,
+            radius: Math.random()*2.6 + 1,
+            color
+          });
+        }
+        for(let i=0;i<36;i++){
+          const a = (i/36)*Math.PI*2;
+          particles.push({
+            x: x + Math.cos(a)*10, y: y + Math.sin(a)*10,
+            vx: Math.cos(a)*1.2, vy: Math.sin(a)*1.2,
+            life: 45, decay: 0.985,
+            radius: 1.2, color: '#fff'
+          });
         }
       }
-    } else if(finaleStage==='grand'){
-      if(Math.random()<0.26) spawnRocket(Math.random()*W);
-      updateRockets(); drawSparks(); updateSparks();
-      finaleTimer += elapsed;
-      if(finaleTimer>6000){ finaleStage='calm'; }
-    } else if(finaleStage==='calm'){
-      if(Math.random()<0.04) spawnRocket(Math.random()*W, H*0.4 + Math.random()*H*0.2);
-      updateRockets(); drawSparks(); updateSparks();
+
+      let last = 0;
+      function frame(ts){
+        if(!last) last = ts;
+        const dt = (ts - last)/16.67; last = ts;
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        if(Math.random() < 0.06) spawnRocket();
+        for(let i=rockets.length-1;i>=0;i--){
+          const r = rockets[i];
+          r.x += r.vx*dt; r.y += r.vy*dt; r.vy += gravity*dt;
+          ctx.beginPath();
+          ctx.arc(r.x, r.y, 2.2, 0, Math.PI*2);
+          ctx.fillStyle = '#fff';
+          ctx.fill();
+
+          if(r.y <= r.peak){
+            explode(r.x, r.y, r.color);
+            rockets.splice(i,1);
+          }
+        }
+
+        for(let i=particles.length-1;i>=0;i--){
+          const p = particles[i];
+          p.x += p.vx*dt; p.y += p.vy*dt; p.vy += gravity*0.15*dt;
+          p.life -= dt; p.vx *= p.decay; p.vy *= p.decay;
+          if(p.life <= 0){ particles.splice(i,1); continue; }
+          ctx.globalCompositeOperation = 'lighter';
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI*2);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+          ctx.globalCompositeOperation = 'source-over';
+        }
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
     }
 
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
-
-  window.addEventListener('visibilitychange', ()=>{
-    if(document.visibilityState === 'visible' && finalStageActive()) {
-      running = true;
+    function burstSparkles(){
+      const burst = document.createElement('div');
+      burst.style.position = 'fixed';
+      burst.style.inset = '0';
+      burst.style.pointerEvents = 'none';
+      burst.style.zIndex = '4';
+      document.body.appendChild(burst);
+      const n = 80;
+      for(let i=0;i<n;i++){
+        const s = document.createElement('span');
+        const x = Math.random()*100;
+        const y = Math.random()*60 + 10;
+        const size = Math.random()*6 + 3;
+        s.style.position='absolute';
+        s.style.left = x+'vw'; s.style.top = y+'vh';
+        s.style.width = size+'px'; s.style.height = size+'px';
+        s.style.background = `radial-gradient(circle, #fff, #fff0)`;
+        s.style.filter = 'drop-shadow(0 0 6px #fff)';
+        s.style.borderRadius='50%';
+        const dx = (Math.random()-0.5)*2.6;
+        const dy = (Math.random()-0.5)*2.0;
+        s.animate([
+          { transform:`translate(0,0) scale(1)`, opacity: 1 },
+          { transform:`translate(${dx}rem, ${dy}rem) scale(0)`, opacity: 0 }
+        ], { duration: 1600 + Math.random()*800, easing: 'ease-out', fill:'forwards' });
+        burst.appendChild(s);
+      }
+      setTimeout(()=> burst.remove(), 2400);
     }
-  });
-
-  function finalStageActive(){ return finaleStage !== 'idle'; }
-
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Enter' && !finalStageActive()){
-      const b = document.getElementById('finaleBtn');
-      if(b) b.click();
-    }
-  });
-
-  makeStars();
-
-  window.startFinale = startFinale;
-  window.nextStep = nextStep;
-  window.selectEmoji = selectEmoji;
-  window.selectWord = selectWord;
-
-</script>
+  </script>
 </body>
 </html>
